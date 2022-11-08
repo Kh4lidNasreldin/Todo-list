@@ -1,0 +1,143 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  overflow: hidden;
+  background: linear-gradient(to right bottom, #f857a6, #ff5858);
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  max-width: 400px;
+  padding: 25px 0;
+  margin: 135px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.task-input {
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+}
+.task-input span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+.task-input input {
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 0 20px 0 50px;
+  outline: none;
+}
+.task-input input::placeholder {
+  color: #bbbbbb;
+}
+.controls,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  border-bottom: 1px solid #ddd;
+}
+.filters span {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 1em;
+}
+.filters span:first-child {
+  margin-left: 0;
+}
+.filters span.active {
+  color: #3c87ff;
+}
+.controls .clear-btn {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #3c87ff;
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.task-box {
+  margin: 20px 25px;
+}
+.task-box .task {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.task-box .task:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.task label {
+  display: flex;
+}
+.task-box .task input {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.task-box .task .settings {
+  cursor: pointer;
+  position: relative;
+}
+.task-box .task .task-menu {
+  position: absolute;
+  z-index: 2;
+  padding: 5px 0;
+  right: -3px;
+  bottom: -65;
+  transform: scale(0);
+  transition: all 0.3s;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.task-box .task .settings .task-menu.show {
+  transform: scale(1);
+}
+.task-box .task .task-menu li {
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 3px;
+  justify-content: flex-start;
+  padding-right: 10px;
+}
+.task-box .task .task-menu li:hover {
+  background-color: rgb(240, 240, 240);
+}
+.task-box .task .task-menu li i {
+  padding-right: 10px;
+  margin-left: 5px;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+}
